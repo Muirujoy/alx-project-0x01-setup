@@ -35,13 +35,12 @@ const Users: React.FC<UsersPageProps> = ({ users }) => {
             <UserCard key={user.id} user={user} />
           ))}
         </div>
+
+        {/* Only pass onSubmit, not onAddUser */}
         <UserModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          onAddUser={handleAddUser}
           onSubmit={handleAddUser}
-
-
         />
       </main>
     </div>
