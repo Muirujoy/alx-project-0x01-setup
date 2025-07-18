@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { UserModalProps, UserData } from "@/interfaces";
 
-const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onAddUser }) => {
+const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onSubmit }) => {
   const [formData, setFormData] = useState<UserData>({
     id: Date.now(),
     name: "",
@@ -31,7 +31,7 @@ const UserModal: React.FC<UserModalProps> = ({ isOpen, onClose, onAddUser }) => 
   };
 
   const handleSubmit = () => {
-    onAddUser(formData);
+    onSubmit(formData); // ✅ now calling onSubmit, not onAddUser
   };
 
   if (!isOpen) return null;
