@@ -1,4 +1,12 @@
 import { PostProps } from "@/interfaces";
+import React from "react";
+
+export interface PostCardProps {
+  id: number;
+  title: string;
+  body: string;
+  userId: number;
+}
 
 const PostCard: React.FC<PostProps> = ({ title, body, userId, id }) => {
   return (

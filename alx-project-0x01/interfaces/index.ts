@@ -44,7 +44,7 @@ export interface PostProps {
 
 export interface PostData {
   userId: number;
-  id?: number; // optional when creating new
+  
   title: string;
   body: string;
 }
@@ -53,3 +53,4 @@ export interface PostModalProps {
   onClose: () => void;
   onSubmit: (post: PostData) => void;
 }
+
