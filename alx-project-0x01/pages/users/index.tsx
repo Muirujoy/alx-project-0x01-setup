@@ -1,7 +1,12 @@
-const Users = () => {
+import Header from "@/components/layout/Header";
+
+const Users: React.FC = () => {
   return (
-    <div className="p-4">
-      <h1 className="text-3xl font-bold mb-4">Users Page</h1>
+    <div className="flex flex-col h-screen">
+      <Header />
+      <main className="flex-grow flex items-center justify-center">
+        <h1 className="text-4xl font-bold">Users Page</h1>
+      </main>
     </div>
   );
 };
