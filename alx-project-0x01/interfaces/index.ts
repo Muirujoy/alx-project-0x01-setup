@@ -23,17 +23,13 @@ export interface UserProps {
   };
 }
 
-// Define UserData for new user input (you can keep same as UserProps if needed)
-export type UserData = UserProps;
-
 // For the UserModal component
 export interface UserModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (user: UserProps) => void; // ✅ required by project check
-  onAddUser?: (user: UserProps) => void; // optional if still used elsewhere
+  onSubmit: (Post: UserProps) => void; 
+  onAddUser?: (PostS: UserProps) => void;
 }
-
 // Post interfaces
 export interface PostProps {
   userId: number;
