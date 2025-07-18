@@ -1,7 +1,7 @@
 import PostCard from "@/components/common/PostCard";
 import PostModal from "@/components/common/PostModal";
 import Header from "@/components/layout/Header";
-import { PostData, PostProps } from "@/interfaces";
+import { PostData } from "@/interfaces";
 import { useState } from "react";
 
 interface PostsPageProps {
@@ -30,10 +30,16 @@ const Posts: React.FC<PostsPageProps> = ({ posts }) => {
           </button>
         </div>
         <div className="grid grid-cols-3 gap-2">
-          {posts.map(({ title, body, userId, id }, key) => (
-            <PostCard title={title} body={body} userId={userId} id={id} key={key} />
-          ))}
-        </div>
+          posts.map(({ title, body, userId, id }) = (
+  <PostCard
+    key={id}
+    id={id}
+    title={title}
+    body={body}
+    userId={userId}
+  />
+))
+       </div>
       </main>
 
       {isModalOpen && (

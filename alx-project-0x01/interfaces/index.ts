@@ -74,6 +74,6 @@ export interface UserData {
 export interface UserModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onAddUser: (user: UserData) => void; // ← This must exist
-  onSubmit: (user: UserData) => void;
+  onAddUser: (user: UserData) => void; 
+   onSubmit: (user: UserData) => void; 
 }
