@@ -9,7 +9,7 @@ interface PostsPageProps {
 }
 
 const Posts: React.FC<PostsPageProps> = ({ posts }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [, setIsModalOpen] = useState(false);
   const [postList, setPostList] = useState<PostData[]>(posts);
 
   const handleAddPost = (newPost: PostData) => {
@@ -34,12 +34,11 @@ const Posts: React.FC<PostsPageProps> = ({ posts }) => {
         <div className="grid grid-cols-3 gap-4">
           {postList.map((post) => (
             <PostCard
-  key={post.id}
-  id={post.id}
-  title={post.title}
-  body={post.body}
-  userId={post.userId}
-/>
+              key={post.id}
+              title={post.title}
+              body={post.body}
+              userId={post.userId} id={0}/>
+
 
           ))}
         </div>
