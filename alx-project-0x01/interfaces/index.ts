@@ -30,8 +30,8 @@ export type UserData = UserProps;
 export interface UserModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: (user: UserData) => void; // ✅ required by project check
-  onAddUser?: (user: UserData) => void; // optional if still used elsewhere
+  onSubmit: (user: UserProps) => void; // ✅ required by project check
+  onAddUser?: (user: UserProps) => void; // optional if still used elsewhere
 }
 
 // Post interfaces
